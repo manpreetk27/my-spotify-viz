@@ -4,7 +4,7 @@
 A personalized data visualization dashboard that transforms your Spotify listening habits into beautiful, interactive charts and insights. Built with Streamlit, Plotly, and the Spotify API.
 
 ---
-<img width="1500" height="440" src="placeholder"/>
+<img width="1500" height="440" src="https://github.com/manpreetk27/my-spotify-viz/blob/0c3c87a76e76222b29c87d3f52bd0fd4f2d881bb/assets/screen.png"/>
 
 ## ✨ Features
 
