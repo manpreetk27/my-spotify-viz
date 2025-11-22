@@ -27,7 +27,7 @@ A personalized data visualization dashboard that transforms your Spotify listeni
 
 1. **Clone the repository**
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/manpreetk27/my-spotify-viz.git
    cd Spotify
 
 2. **Create a virtual environment**
