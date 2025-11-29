@@ -97,7 +97,7 @@ st.markdown("""
 st.subheader("🪩 My Aura Breakdown (Simulated)") 
 st.dataframe(df.style.format({
     "Energy": "{:.2f}", "Valence": "{:.2f}", "Danceability": "{:.2f}" # format to 2 decimal places
-}).background_gradient(cmap='plasma', subset=["Energy", "Valence", "Danceability"])), # apply plasma colormap gradient to specified columns
+}).background_gradient(cmap='plasma', subset=["Energy", "Valence", "Danceability"]), # apply plasma colormap gradient to specified columns
 use_container_width=True, height=730)
 
 
