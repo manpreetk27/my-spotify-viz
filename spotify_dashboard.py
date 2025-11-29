@@ -28,8 +28,7 @@ st.markdown('<div class="centered"><h1>🎧 manpreet\'s spotify insights</h1>'
 
 st.write("")
 
-if st.button("→ Start by seeing the genres I vibe with"):
-    st.switch_page("pages/my_spotify_insights.py")
+st.button("→ To access details of the project, click the links on top left.")
 
 
 
