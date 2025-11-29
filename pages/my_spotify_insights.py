@@ -11,7 +11,7 @@ import plotly.express as px  # for color scales
 # page setup
 st.set_page_config(page_title="My Genre Galaxy", page_icon="🌌", layout="centered")
 st.title("🌌 my genre galaxy")
-st.write("each genre plotted as an orbiting planet though space - based on my top artists' genres")
+st.write("each genre plotted as an orbiting planet through space - based on my top artists' genres")
 
 # spotify auth
 load_dotenv()
