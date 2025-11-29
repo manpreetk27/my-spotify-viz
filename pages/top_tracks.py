@@ -36,7 +36,7 @@ try: # try to get real data
     durations = [t['duration_ms'] / 1000 / 60 for t in tracks]  # convert ms to minutes
 
 except: # fallback data since my oauth might fail for others
-    st.warning("⚠️ Since Manpreet's Spotify data can't be fetched — showing sample listening patterns instead! Add your own Spotify credentials to see your top tracks!")
+    st.warning("⚠️ Spotify data can't be fetched — showing sample listening patterns instead. \n\n Add your own Spotify credentials to see your top tracks!")
     track_names = ["Pink + White", "Cool With You", "Supercut", "505", "Nights", "Die For You", "Golden Hour", "Kill Bill", "Electric Feel", "ILYSB"]
     artists = ["Frank Ocean", "NewJeans", "Lorde", "Arctic Monkeys", "Frank Ocean", "The Weeknd", "JVKE", "SZA", "MGMT", "LANY"]
     popularities = [95, 90, 87, 89, 92, 94, 88, 85, 86, 84]
