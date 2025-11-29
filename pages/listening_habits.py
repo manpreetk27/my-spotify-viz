@@ -45,7 +45,7 @@ try:
     df["day"] = df["played_at"].dt.day_name() # e.g., Monday
 
 except Exception as e: # fallback to sample data
-    st.warning(f"⚠️ Spotify data can't be fetched — showing sample listening patterns instead! \nAdd your own Spotify credentials to see your personal listening patterns!")
+    st.warning(f"⚠️ Spotify data can't be fetched — showing sample listening patterns instead! \n\nAdd your own Spotify credentials to see your personal listening patterns!")
     # Simulated sample data to still render the visualisation
     days_order = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"] # days of the week
     hours = [f"{(h if h != 0 else 12):02d} AM" if h < 12 else f"{(h-12 if h != 12 else 12):02d} PM" for h in range(24)]
