@@ -30,7 +30,7 @@ try: # try to get real data
     artist_popularity = [a['popularity'] for a in results['items']] # artist popularity scores
 
 except: # fallback data since my oauth might fail for others
-    st.warning("Using sample data since Spotify authentication failed.")
+    st.warning("⚠️ Since Manpreet's Spotify data can't be fetched — showing sample listening patterns instead! Add your own Spotify credentials to see your top artists!")
     artist_names = ["Frank Ocean", "SZA", "Lorde", "Arctic Monkeys", "Tame Impala", "The Weeknd", "LANY", "Clairo", "Kali Uchis", "Post Malone"] # artist names
     artist_popularity = [95, 88, 83, 90, 87, 92, 78, 75, 80, 85] # artist popularity scores
 
