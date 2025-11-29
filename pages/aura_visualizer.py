@@ -6,7 +6,7 @@ import plotly.express as px # interactive plotting
 import matplotlib.pyplot as plt # for static plotting
 
 st.set_page_config(page_title="Aura Visualiser", page_icon="🌈", layout="centered")
-st.title(" 🌻 my spotify aura")
+st.title(" 🌻 manpreet's spotify aura")
 st.write("An interactive visualisation of my music mood — inspired by Spotify Wrapped’s emotional color palette 🎶")
 
 # simulated song data with energy, valence, danceability
@@ -29,6 +29,19 @@ data["Valence"] = np.random.uniform(0.2, 1.0, 20) # what this does is randomly a
 data["Danceability"] = np.random.uniform(0.3, 1.0, 20) # what this does is randomly assigns danceability
 df = pd.DataFrame(data) # create dataframe
 
+# add title for the plot
+st.subheader("my musical aura")
+
+# description
+st.caption("""
+Each dot represents a song 🎧  
+Color = emotional positivity (valence)  
+Size = energy level  
+X/Y position = how lively & danceable it feels  
+
+Together, they form my musical aura — a glowing reflection of my vibe and energy
+""")
+
 # plotly aura visual
 fig = px.scatter( # interactive scatter plot
     df,
@@ -44,7 +57,6 @@ fig = px.scatter( # interactive scatter plot
         "Valence": ":.2f", # format valence to 2 decimal places
         "Danceability": ":.2f", # format danceability to 2 decimal places
     },
-    title="my musical aura", # plot title
     size_max=60, # maximum size of points
     height=700,  # increase plot height
 )
@@ -53,22 +65,11 @@ fig.update_layout( # layout adjustments
     paper_bgcolor="black", # background color of the paper which is the area around the plot
     plot_bgcolor="black", # background color of the plot
     font=dict(color="white"), # font color
-    title_font=dict(size=22, color="white"), # title font size and color
     xaxis=dict(title="Danceability →", color="white", gridcolor="rgba(255,255,255,0.1)"), # x-axis settings
     yaxis=dict(title="↑ Energy", color="white", gridcolor="rgba(255,255,255,0.1)"), # y-axis settings
 )
 
 st.plotly_chart(fig, use_container_width=True) # display plot in streamlit
-
-# description
-st.markdown("""
-Each dot represents a song 🎧  
-- **Color** = emotional positivity (valence)  
-- **Size** = energy level  
-- **X/Y position** = how lively & danceable it feels  
-
-Together, they form my **musical aura** — a glowing reflection of my vibe and energy
-""")
 
 # mood color scale
 st.subheader("🎨 Aura Color Scale – What the Colors Mean") 
@@ -96,8 +97,8 @@ st.markdown("""
 st.subheader("🪩 My Aura Breakdown (Simulated)") 
 st.dataframe(df.style.format({
     "Energy": "{:.2f}", "Valence": "{:.2f}", "Danceability": "{:.2f}" # format to 2 decimal places
-}).background_gradient(cmap='plasma', subset=["Energy", "Valence", "Danceability"])) # apply plasma colormap gradient to specified columns
-
+}).background_gradient(cmap='plasma', subset=["Energy", "Valence", "Danceability"])), # apply plasma colormap gradient to specified columns
+use_container_width=True, height=730)
 
 
 
