@@ -60,6 +60,16 @@ fig.update_layout( # layout adjustments
 
 st.plotly_chart(fig, use_container_width=True) # display plot in streamlit
 
+# description
+st.markdown("""
+Each dot represents a song 🎧  
+- **Color** = emotional positivity (valence)  
+- **Size** = energy level  
+- **X/Y position** = how lively & danceable it feels  
+
+Together, they form my **musical aura** — a glowing reflection of my vibe and energy
+""")
+
 # mood color scale
 st.subheader("🎨 Aura Color Scale – What the Colors Mean") 
 
@@ -88,15 +98,6 @@ st.dataframe(df.style.format({
     "Energy": "{:.2f}", "Valence": "{:.2f}", "Danceability": "{:.2f}" # format to 2 decimal places
 }).background_gradient(cmap='plasma', subset=["Energy", "Valence", "Danceability"])) # apply plasma colormap gradient to specified columns
 
-# description
-st.markdown("""
-Each dot represents a song 🎧  
-- **Color** = emotional positivity (valence)  
-- **Size** = energy level  
-- **X/Y position** = how lively & danceable it feels  
-
-Together, they form my **musical aura** — a glowing reflection of my vibe and energy
-""")
 
 
 
