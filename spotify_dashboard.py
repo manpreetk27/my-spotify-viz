@@ -28,7 +28,7 @@ st.markdown('<div class="centered"><h1>🎧 manpreet\'s spotify insights</h1>'
 
 st.write("")
 
-st.button("→ To access details of the project, click the links on top left.")
+st.button("To access details of the project, unfurl the expandable menu by clicking the double-arrow on the top left of this page >>")
 
 
 
